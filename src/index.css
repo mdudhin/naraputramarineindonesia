@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bondi-blue: #049cab;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
