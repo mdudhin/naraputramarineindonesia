@@ -1,12 +1,7 @@
 import React from "react";
 import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
-import type { Page } from "../data";
 
-interface ContactFooterProps {
-  setCurrentPage: (page: Page) => void;
-}
-
-const ContactFooter: React.FC<ContactFooterProps> = React.memo(({}) => (
+const ContactFooter: React.FC = React.memo(() => (
   <footer id="contact" className="relative bg-gray-100 text-gray-700">
     <div className="absolute inset-0 opacity-10">
       <img
