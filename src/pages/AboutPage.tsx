@@ -1,7 +1,6 @@
 import React from "react";
-import { appData, orgChartData } from "../data";
+import { appData } from "../data";
 import MotionSection from "../components/MotionSection";
-import OrganizationChart from "../components/OrganizationChart";
 
 const AboutPage: React.FC = () => {
   return (
@@ -123,13 +122,33 @@ const AboutPage: React.FC = () => {
                 key={partner.name}
                 className="group relative flex justify-center items-center p-4 rounded-lg transition-transform duration-300 hover:scale-105"
               >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-h-12"
-                />
+                {partner.website ? (
+                  <a
+                    href={partner.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex justify-center items-center"
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-12"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-12"
+                  />
+                )}
                 <div className="absolute bottom-full mb-2 w-max px-3 py-1.5 text-sm font-medium text-bondi-blue bg-[#049CAB30] rounded-lg shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {partner.name}
+                  {partner.website && (
+                    <div className="text-xs text-gray-500 mt-1">
+                      Click to visit website
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -148,8 +167,12 @@ const AboutPage: React.FC = () => {
               The structure that drives our success.
             </p>
           </div>
-          <div className="flex justify-center w-full overflow-x-auto">
-            <OrganizationChart data={orgChartData} />
+          <div className="flex justify-center w-full">
+            <img
+              src="/naraputra.svg"
+              alt="Naraputra Marine Indonesia"
+              className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl w-full h-auto object-contain"
+            />
           </div>
         </div>
       </MotionSection>

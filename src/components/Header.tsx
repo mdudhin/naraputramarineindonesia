@@ -14,18 +14,18 @@ const Header: React.FC = React.memo(() => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-30 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 shadow-md backdrop-blur-sm" : "bg-transparent"
+        isScrolled ? "bg-white/95 shadow-lg backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <a
             href="#"
             onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
               e.preventDefault();
               window.location.reload();
             }}
-            className="flex-shrink-0"
+            className="flex-shrink-0 hover:opacity-80 transition-opacity duration-300"
           >
             <div
               className={`${
@@ -35,7 +35,7 @@ const Header: React.FC = React.memo(() => {
               <img
                 src={isScrolled ? logo : logoWhite}
                 alt="Logo NPMI"
-                className="w-20"
+                className="w-16 sm:w-20 h-auto"
               />
             </div>
           </a>

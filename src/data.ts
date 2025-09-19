@@ -46,6 +46,7 @@ interface CoreValue extends ContentItem {
 interface Partner {
   name: string;
   logo: string;
+  website?: string;
 }
 
 interface MarketingPoint {
@@ -165,26 +166,31 @@ export const appData = {
     {
       name: "PT. Karyawaja Putra Sriwijaya (SHIPYARD)",
       logo: kps,
-    },
-    {
-      name: "PT. Lentera Dua Energi",
-      logo: lde,
+      website: "https://www.kps-shipyard.com/",
     },
     {
       name: "PT. Deriaz Energy Resources",
       logo: der,
+      website: "https://deriazenergy.com/",
     },
     {
       name: "PT. Metalik Bara Sinergi",
       logo: mbs,
+      website: "https://www.google.com/maps/place/Kantor+PT.+Metalik+Bara+Sinergi/data=!4m2!3m1!1s0x0:0xa55307fda236ffb8?sa=X&ved=1t:2428&ictx=111",
     },
     {
       name: "NEI Group",
       logo: nei,
+      website: "https://www.nei.co.id/",
     },
     {
       name: "PT. Trans Energy Indonesia",
       logo: tei,
+      website: "https://www.tei.co.id/",
+    },
+    {
+      name: "PT. Lentera Dua Energi",
+      logo: lde,
     },
   ] as Partner[],
 
@@ -257,58 +263,11 @@ export const appData = {
     title: "Place",
     description: "Main operational areas:",
     items: [
-      "Kalimantan (east, south)",
-      "Sumatera (south)",
+      "Kalimantan (East, South)",
+      "Sumatera (South)",
       "Java (Industrial port destination)",
     ],
     potential: "Export potential to southeast Asian countries",
   },
 };
 
-// src/data/orgChart.ts
-export interface OrgNode {
-  id: string;
-  name: string;
-  role?: string; // Role is now optional
-  children?: OrgNode[];
-  className?: string; // Allow custom styling for specific nodes
-}
-
-export const orgChartData: OrgNode = {
-  id: "commissioner",
-  name: "COMMISSIONER",
-  className: "bg-teal-600",
-  children: [
-    {
-      id: "director",
-      name: "DIRECTOR",
-      children: [
-        {
-          id: "gm",
-          name: "GENERAL MANAGER",
-          className: "bg-teal-600",
-          children: [
-            {
-              id: "pm",
-              name: "PROJECT MANAGER",
-              children: [
-                { id: "ga", name: "GENERAL AFFAIR" },
-                {
-                  id: "hrd",
-                  name: "HUMAN RESOURCE DEVELOPMENT",
-                  className: "bg-teal-600",
-                },
-                { id: "ops", name: "OPERATIONAL DEPT." },
-              ],
-            },
-          ],
-        },
-        {
-          id: "finance",
-          name: "FINANCE",
-          className: "bg-teal-600",
-        },
-      ],
-    },
-  ],
-};
