@@ -66,7 +66,7 @@ export default function App() {
       >
         <Suspense fallback={<LoadingSpinner />}>{renderPage()}</Suspense>
       </main>
-      <ContactFooter setCurrentPage={handleSetPage} />
+      <ContactFooter />
       <SidebarToggle isOpen={isSidebarOpen} onToggle={handleToggleSidebar} />
       <Sidebar
         currentPage={currentPage}
