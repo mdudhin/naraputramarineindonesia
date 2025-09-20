@@ -1,7 +1,6 @@
 import { useState, useEffect, Suspense, lazy } from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import SidebarToggle from "./components/SidebarToggle";
 import ContactFooter from "./components/ContactFooter";
 import type { Page } from "./data";
 
@@ -58,7 +57,10 @@ export default function App() {
 
   return (
     <div className="bg-white font-sans">
-      <Header />
+      <Header 
+        isSidebarOpen={isSidebarOpen} 
+        onToggleSidebar={handleToggleSidebar} 
+      />
       <main
         className={`transition-opacity duration-400 ${
           isAnimatingOut ? "opacity-0" : "opacity-100"
@@ -67,7 +69,6 @@ export default function App() {
         <Suspense fallback={<LoadingSpinner />}>{renderPage()}</Suspense>
       </main>
       <ContactFooter />
-      <SidebarToggle isOpen={isSidebarOpen} onToggle={handleToggleSidebar} />
       <Sidebar
         currentPage={currentPage}
         setCurrentPage={handleSetPage}

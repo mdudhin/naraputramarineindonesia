@@ -14,7 +14,7 @@ const Sidebar: React.FC<SidebarProps> = React.memo(
 
     return (
       <>
-        <div className="fixed top-0 right-0 h-full z-50 transform transition-transform duration-300 ease-in-out translate-x-0">
+        <div className="fixed top-0 right-0 h-full z-40 transform transition-transform duration-300 ease-in-out translate-x-0">
           <div className="relative w-64 md:w-20 h-full flex flex-col justify-center">
             <nav className="flex flex-col bg-black/60 backdrop-blur-md justify-center rounded-tl-2xl rounded-bl-2xl">
               {appData.sidebarLinks.map((link, index) => (
@@ -50,7 +50,7 @@ const Sidebar: React.FC<SidebarProps> = React.memo(
         </div>
         <div
           onClick={onClose}
-          className="fixed inset-0 bg-black/70 z-40 md:hidden"
+          className="fixed inset-0 bg-black/70 z-30 md:hidden"
         ></div>
       </>
     );
