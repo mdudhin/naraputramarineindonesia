@@ -2,6 +2,7 @@ import { useState, useEffect, Suspense, lazy } from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import ContactFooter from "./components/ContactFooter";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 import type { Page } from "./data";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -75,6 +76,7 @@ export default function App() {
         isOpen={isSidebarOpen}
         onClose={() => setIsSidebarOpen(false)}
       />
+      <WhatsAppFloat />
     </div>
   );
 }
