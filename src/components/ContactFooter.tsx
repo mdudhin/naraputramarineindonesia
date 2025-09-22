@@ -63,81 +63,25 @@ const ContactFooter: React.FC = React.memo(() => (
           </div>
         </div>
         <div className="lg:col-span-2 animate-fade-in-right">
-          <div className="contact-form-container">
-            <h3 className="font-semibold text-2xl mb-6 text-center lg:text-left gradient-text">
-              Get Started
-            </h3>
-            <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              <div className="form-group">
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-lg focus:border-bondi-blue focus:outline-none focus:ring-2 focus:ring-bondi-blue/20 transition-all duration-300 placeholder-gray-500 hover:border-gray-300"
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-lg focus:border-bondi-blue focus:outline-none focus:ring-2 focus:ring-bondi-blue/20 transition-all duration-300 placeholder-gray-500 hover:border-gray-300"
-                />
-              </div>
-              <div className="form-group md:col-span-2">
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-lg focus:border-bondi-blue focus:outline-none focus:ring-2 focus:ring-bondi-blue/20 transition-all duration-300 placeholder-gray-500 hover:border-gray-300"
-                />
-              </div>
-              <div className="form-group md:col-span-2">
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-lg focus:border-bondi-blue focus:outline-none focus:ring-2 focus:ring-bondi-blue/20 transition-all duration-300 placeholder-gray-500 hover:border-gray-300"
-                />
-              </div>
-            </div>
-            <div className="form-group">
-              <textarea
-                placeholder="Leave us a message..."
-                rows={4}
-                className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-lg focus:border-bondi-blue focus:outline-none focus:ring-2 focus:ring-bondi-blue/20 transition-all duration-300 placeholder-gray-500 hover:border-gray-300 resize-none"
-              ></textarea>
-            </div>
-            <div className="flex justify-center lg:justify-start">
-              <button
-                type="submit"
-                className="btn-primary group relative px-8 py-3 bg-gradient-to-r from-bondi-blue to-[#038a9a] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-bondi-blue/50 focus:ring-offset-2 cursor-pointer"
-              >
-                <span className="relative z-10">Send Request</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#038a9a] to-bondi-blue rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
-            </div>
-            </form>
+          <h3 className="font-semibold text-2xl mb-6 text-center lg:text-left gradient-text">
+            Our Location
+          </h3>
+          <div className="w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-xl border-2 border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.303720755346!2d104.7048329!3d-3.0127846999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b9f3254c306ed%3A0xbd77b993cd8b97c!2sPT.%20Naraputra%20Marine%20Indonesia!5e0!3m2!1sen!2sid!4v1754133169510!5m2!1sen!2sid"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="PT Naraputra Marine Indonesia Location"
+              className="rounded-xl"
+            ></iframe>
           </div>
         </div>
       </div>
 
-      {/* Google Map Section */}
-      <div className="mt-16 animate-fade-in-up">
-        <h3 className="font-semibold text-xl mb-6 text-center lg:text-left gradient-text">
-          Our Location
-        </h3>
-        <div className="w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-xl border-2 border-gray-200 hover:shadow-2xl transition-shadow duration-300">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.303720755346!2d104.7048329!3d-3.0127846999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b9f3254c306ed%3A0xbd77b993cd8b97c!2sPT.%20Naraputra%20Marine%20Indonesia!5e0!3m2!1sen!2sid!4v1754133169510!5m2!1sen!2sid"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="PT Naraputra Marine Indonesia Location"
-            className="rounded-xl"
-          ></iframe>
-        </div>
-      </div>
     </div>
     <div className="bg-[#049CAB30] py-4">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-black text-sm">

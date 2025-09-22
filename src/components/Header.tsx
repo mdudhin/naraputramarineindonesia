@@ -23,15 +23,15 @@ const Header: React.FC<HeaderProps> = React.memo(({ isSidebarOpen, onToggleSideb
         isScrolled ? "bg-white/95 shadow-lg backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+        <div className="flex items-center justify-between h-16 sm:h-20 max-w-none">
           <a
             href="#"
             onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
               e.preventDefault();
               window.location.reload();
             }}
-            className="flex-shrink-0 hover:opacity-80 transition-opacity duration-300"
+            className="flex-shrink-0 hover:opacity-80 transition-opacity duration-300 -ml-1 lg:-ml-2 xl:-ml-3"
           >
             <div
               className={`${
@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = React.memo(({ isSidebarOpen, onToggleSideb
           {/* Sidebar Toggle Button */}
           <button
             onClick={onToggleSidebar}
-            className={`h-12 w-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 cursor-pointer ${
+            className={`h-12 w-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 cursor-pointer -mr-1 lg:-mr-2 xl:-mr-3 ${
               isScrolled 
                 ? "bg-gray-800/40 text-gray-800 hover:bg-gray-800/60" 
                 : "bg-black/40 text-white hover:bg-black/60"
